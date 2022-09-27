@@ -1,0 +1,22 @@
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main-content-container {
+    width: 100%;
+    height: auto;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.main-content {
+    width: 100%;
+    max-width: var(--maxContentWidth);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
