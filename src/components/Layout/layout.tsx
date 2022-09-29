@@ -10,7 +10,7 @@ interface layoutProps {
 function Layout(props: layoutProps) {
   return (
     <div className='main-container'>
-        <LoadingBar />
+        <div id="loadingBar" />
         <Header />
         <div className='main-content-container'>
             <div className='main-content'>
