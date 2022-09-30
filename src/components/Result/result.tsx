@@ -9,13 +9,30 @@ interface ResultProps {
     channelTitle: string,
     publishTime: string,
     description: string,
-    thumbnails: {high: {url: string}}
+    thumbnails: {
+      high: {url: string},
+      default: {url: string}
+    }
   }
 }
 
 function Result(props: ResultProps) {
 
   const [img, setImg] = useState(props.data.thumbnails.high.url);
+  const [mobileView, setMobileView] = useState(false);
+
+  useEffect(() => {
+    setMobileView(window.innerWidth < 600);
+    window.addEventListener("resize", () => setMobileView(window.innerWidth < 600));
+  }, []);
+
+  useEffect(() => {
+    if(mobileView) setImg(props.data.thumbnails.default.url); else setImg(props.data.thumbnails.high.url);
+  }, [mobileView]);
+
+  useEffect(() => {
+    if(mobileView) setImg(props.data.thumbnails.default.url); else setImg(props.data.thumbnails.high.url);
+  }, [props.data]);
 
   const calculateTime = (givenTime: string) => {
     const firstTime: any = new Date(givenTime);

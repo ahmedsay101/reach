@@ -33,6 +33,10 @@ input, input:focus, input:active, button, button:focus, button:active {
     background-color: transparent;
 }
 
+button {
+    cursor: pointer;
+}
+
 h2 {
     font-size: 1.8rem;
     color: #333;

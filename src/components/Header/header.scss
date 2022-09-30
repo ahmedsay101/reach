@@ -3,6 +3,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 80px;
 }
 .logo {
     width: 120px;
@@ -19,6 +20,11 @@
     -webkit-box-shadow: 0 4px 2px -2px #ccc;
     -moz-box-shadow: 0 4px 2px -2px #ccc;
     margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: #fff;
 }
 .main-header-content {
     width: 100%;
@@ -27,4 +33,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
+}
+
+.logo {
+    margin-right: 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .main-header-container {
+        background-color: var(--mainColor);
+        position: relative;
+    }
+    .logo {
+        width: 55px;
+        height: 50px;
+        margin-right: 2rem;
+    }
+    .main-container {
+        padding-top: 0px;
+    }
 }

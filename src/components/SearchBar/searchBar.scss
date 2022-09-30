@@ -20,3 +20,36 @@
     height: 100%;
     border-left: none;
 }
+.mobile-search-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 2rem;
+    align-items: center;
+}
+.mobile-search-form {
+    flex: 1;
+    padding: 1rem;
+    margin: 0 1rem;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+.mobile-search-input {
+    border-radius: 0px;
+    font-size: 1.6rem;
+    height: 100%;
+    background-color: transparent;
+    flex: 1
+}
+.search-value-placeholder {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
